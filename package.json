@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"pipenv run python backend/server.py\" \"wait-on http-get://localhost:5000 && cd frontend && npm start\"",
+    "start": "concurrently \"pipenv run python3 backend/server.py\" \"wait-on http-get://localhost:5000 && cd frontend && npm start\"",
     "heroku-prebuild": "cd frontend && npm ci",
     "heroku-postbuild": "cd frontend && npm run build && cd .. && npm run copy:static",
     "copy:static": "rm -rf backend/static && move-cli frontend/build backend/static"

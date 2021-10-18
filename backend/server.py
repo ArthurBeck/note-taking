@@ -2,7 +2,7 @@ import logging
 import os
 
 from gevent.pywsgi import WSGIServer
-from flask import Flask, request
+from flask import Flask, request, redirect
 from flask_cors import CORS
 from mongoengine import connect
 from pymongo import ssl_support
@@ -28,12 +28,16 @@ app = Flask(__name__, static_url_path="", static_folder="static")
 CORS(app)
 
 # route for single note related operations
+
+
 @app.route("/api/notes/<note_id>/delete-image", methods=["PUT"])
 @login_required
 def delete_note_image_route(note_id):
     return delete_note_image(note_id)
 
 # route for single note related operations
+
+
 @app.route("/api/notes/<note_id>", methods=["GET", "PUT", "DELETE"])
 @login_required
 def note_route(note_id):
@@ -72,29 +76,39 @@ def register_route():
     return register(request.get_json())
 
 # route for verifying token
+
+
 @app.route("/api/verify_token", methods=["POST"])
 def verify_token_route():
     return verify_token(request.get_json())
 
 # route for getting profile picture
+
+
 @app.route("/api/user/image", methods=["GET", "PUT"])
 @login_required
 def profile_picture_route():
     if request.method == "GET":
         return get_profile_picture()
-    
+
     return update_profile_picture(request.get_json())
-    
+
 
 @app.route("/", methods=["GET"])
-@app.route("/index.html", methods=["GET"])
 def index():
     if os.environ.get("NODE_ENV") == "development":
         return "OK", 200
 
     return app.send_static_file("index.html")
 
+
+@app.errorhandler(404)
+def handle_404(e):
+    # handle all other routes here
+    return redirect('/')
+
 # start running the application
+
 
 if os.environ.get("NODE_ENV") == "development":
     app.run()

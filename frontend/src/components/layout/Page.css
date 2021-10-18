@@ -1,0 +1,6 @@
+.page-container {
+    padding: 0 30px;
+    position: relative;
+    background-color: #f9f9f9;
+    min-height: calc(100vh - 100px);
+}

@@ -1,0 +1,13 @@
+.auth-page-container {
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-page-container .form-container {
+    background-color: white;
+    border: 2px solid #dedede;
+    border-radius: 20px;
+}

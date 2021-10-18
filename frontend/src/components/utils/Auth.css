@@ -1,0 +1,11 @@
+.auth-spinner-container {
+    position: absolute;
+    top: 130px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

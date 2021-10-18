@@ -1,0 +1,37 @@
+.user-img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    margin-left: 40px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.user-img:hover .userlogo-button-edit  {
+    opacity: 1;
+}
+
+.userlogo-button-edit {
+    border: 2px solid white;
+    color: white;
+}
+
+.userlogo-modal {
+    padding: 50px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: default;
+}
+
+.userlogo-modal-content {
+    margin: 30px 0;
+}

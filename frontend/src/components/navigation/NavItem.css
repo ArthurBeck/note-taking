@@ -1,0 +1,21 @@
+.nav-item {
+    list-style: none;
+    height: 100%;
+    color: white;
+    transition: all 0.4s;
+}
+
+.nav-item:hover {
+    background-color: white;
+    color: rgb(35, 92, 179);
+}
+
+.nav-item-link {
+    padding: 0 40px;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    line-height: 100px;
+    font-weight: 600;
+    font-size: 18px;
+}

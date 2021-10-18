@@ -1,0 +1,26 @@
+.note-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    padding-right: 5px;
+    border-top: 2px solid #235cb3;
+    height: 90px;
+}
+
+.note-list-item:last-child {
+    border-bottom: 2px solid #235cb3;
+}
+
+.note-list-item-title {
+    max-width: 180px;
+    word-wrap: break-word;
+}
+
+.note-list-item .button-with-icon {
+    opacity: 1;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    margin: 8px;
+}

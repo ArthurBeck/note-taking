@@ -1,0 +1,42 @@
+.notecard {
+    width: 200px;
+    height: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 16px;
+    color: rgb(250, 245, 245);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.notecard-title {
+    margin-bottom: 20px;
+    text-align: center;
+    word-break: break-word;
+}
+
+.notecard-button-container {
+    display: flex;   
+    justify-content: space-between;
+    width: 100%;
+}
+
+.notecard:hover .notecard-button-edit, .notecard:hover .notecard-button-delete  {
+    opacity: 1;
+}
+
+.notecard-button-edit {
+    border: 2px solid rgb(137, 121, 206);
+    color: rgb(137, 121, 206);
+}
+
+.notecard-button-delete {
+    border: 2px solid rgb(224, 35, 35);
+    color: rgb(224, 35, 35);
+}
